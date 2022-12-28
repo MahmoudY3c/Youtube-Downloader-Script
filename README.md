@@ -37,13 +37,14 @@ Youtube-Downloader-Script is a script uses YTmp3, YT1s API's to download youtube
   __Example__
 
 ```js
-let data = await downloadFromYt1s([
-  'https://www.youtube.com/watch?v=pfPD183rUu0',
-  'https://www.youtube.com/watch?v=Q921shchhi0',
-  'https://www.youtube.com/watch?v=4qF7UsVL_3s',
-  'https://www.youtube.com/watch?v=fGaMMHPkjPg',
-  'https://www.youtube.com/watch?v=jZxRBNJdM_4'
-])
+let data = await downloadFromYt1s(`
+    https://www.youtube.com/watch?v=fvEZUbzqqyM
+    https://www.youtube.com/watch?v=km4YsvWTCfQ
+    https://www.youtube.com/watch?v=-UChv0ntn-U
+    https://www.youtube.com/watch?v=i1bhSwNU9Ek
+    https://www.youtube.com/watch?v=M3mJkSqZbX4
+  `)
+  console.log(data)
 console.log(data)
 ```
 
@@ -53,9 +54,9 @@ __Example__
 
 ```js
 let data = await downloadFromYt1s([
-  'https://www.youtube.com/watch?v=JGwWNGJdvx8',
-  'https://www.youtube.com/watch?v=om6EutvhnlY',
-  'https://www.youtube.com/watch?v=qqob4D3BoZc',
+  'https://www.youtube.com/watch?v=fvEZUbzqqyM',
+  'https://www.youtube.com/watch?v=km4YsvWTCfQ',
+  'https://www.youtube.com/watch?v=-UChv0ntn-U',
 ])
 console.log(data)
 ```
@@ -65,74 +66,46 @@ console.log(data)
 ```js
 [
   {
-    title: 'اه دا اللي صار- ناي البرغوثي',
-    id: '4qF7UsVL_3s',
-    downloadMp3: 'https://dl181.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ3aTdPRFA4NW1
-rRVJIODh0ZDgzZlJ0Z2pSNlJQTWI3Y2dMajZHQkJZeHJkdUl1bXNIbk5ZWVIxR21kVlluT2FGdk1rc0Z
-qR2lmRTA0OTQ0UjZFdHFwNEhPc2tFektnM3NmMDB4VXV6Q1drTlozcFRQME9PekpmK3dWQ2hHTzNsYlN
-NbUY2OWx5WG9oaHJHU0gxUDZtOU9HYTJWME1jTjhUR09UYWFoOThoQWp3ZmF4c01NZ3FqWWtGbXo0cEI
-3bklVd0JtVTZmb0FPbjV6ODAvWHp0VVlOaU1SWmlHdTlwdmV5RTV3d1dmZTRkQ2NqZTNBdjdhcTllazh
-QNlhJcjYxcVN5Zncyb0cwWkl1Wnk3VzNwM05Xdll5ZUlkOUR6VzVpSkw3WHM4SktyczZreTdoYVI0UER
-Sd1o1Q3h3PT0%3D',
-    size: '4 MB',
+    title: 'Mirrors - Justin Timberlake (Boyce Avenue feat. Fifth Harmony cover) on Spotify & Apple',
+    id: 'fvEZUbzqqyM',
+    downloadMp3: 'https://dl66.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ3aTdPRFA4NW1rRVJIOG12bzJpdG9vMUZ0b0s3NWZzb1Fobk5DcExzdEtQS3NPeG8vcE05Rk45anVUVU1hT1BocU0vWjRqUTJmSzBkODdyVGVFMjQ4eVZNWi9UMTM3bFBDbWhIcDVoMHpHYnRmWkhMNVBKanhhczFCdjFtaWUzS0tTdnh6MHRrSzlwbG1MTVdGWWxDSUVLT0hGODVvTmgwL0dmNlNoZ2JZRDZIUzUrOGhFMitTWStnTDV6dmx6ODlGOFRGWjdZWU5pMDQvbXkvbkNtbE1RalpzWnlFR2xvdWVaQkpFc0g2Q2hlQ0YxTURjTTF1bnFYUThoeVN3WTdHU0IvcTQzNDI4SGFKOTI1M1N4NjgzbWFBQ0xiczNpUnBlZEZlbXR0c244M2Y5M21udjBwUG5XallOdDJBVzNHNDc0UTk1VmxHaGxwTHVUN040ejFsKzAzMUpMMUxkYmxoaXRJeFZzQ0lSZGZuTU5jZz09',
+    size: '5.2 MB',
     quality: '128'
   },
   {
-    title: 'اه يا حلو- ناي البرغوثي  Ah Ya Helu- Nai Barghouti',
-    id: 'Q921shchhi0',
-    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/12dd9e3dc38c401abb
-dac2100e44b147_140.mp3?secure=YvCkaaX9rrz9PXDW0ZdOvg==,1672106886',
-    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/12dd9e3dc38c401abb
-dac2100e44b147_18.mp4?secure=q9RabBVPMhEIYhj2jwIbKA==,1672106886',
-    duration: '6:49',
-    thumbnail: 'https://i.ytimg.com/vi/Q921shchhi0/hqdefault.jpg',
+    title: 'Tanner Patrick - When We Were Young (Adele Cover)',
+    id: 'km4YsvWTCfQ',
+    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/99c3d28776df496b87fd10e57c14ca4b_140.mp3?secure=pN4guaxPwNGDZuzmFwEu4Q==,1672235210',
+    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/99c3d28776df496b87fd10e57c14ca4b_18.mp4?secure=DluvVUDUBpM2_y6-7n72yQ==,1672235210',
+    duration: '4:44',
+    thumbnail: 'https://i.ytimg.com/vi/km4YsvWTCfQ/hqdefault.jpg',
     quality: 'AUDIO_QUALITY_MEDIUM'
   },
   {
-    title: 'وَاللَه ما طَلَعَت شَمسٌ وَلا غَرُبَت - نوران أبو طالب',
-    id: 'jZxRBNJdM_4',
-    downloadMp3: 'https://154.82.111.45.sslip.io/dl2/Sq8oraKaNli0Js5GqqF9GMo1wBc
-f_F5NyrJ0X9JEJqsIDUYMLgDP9C8-ry745tz89adMIx-Pgv7hMZ1TRQeMIDDY4g7otnvQscR2UafHMmN
-DGajsTQwvWkZSRxK2zVgpSO_0BdFb0rAVp1O4I2ON2aerVpKWpTE5d_8FHlGEmnOhxa8nbngn5BmnCFj
-sZJBhM1uWvIQ-q_FaV_WdKubRbtJzGByXau0Gi9mz1oGyjUHqmIDAyeEPq-BSWFBQZAG7CwT2fyA5EL_
-NfvtmRXKE1inZ4YQdf9AQAcOBMKck8ys0n8IOl4csh4OKetv1GSqV9Ucc3fCdg1Eg975J7yuVaJ3U_Mb
-dCVpNgM4ZnJXO-yYBl3wvxFYqNVS8TfBLk-bm381yh68UyziV2lTx4o3PkmnDLvGX8Y8W5tLsd8xgpoo
-Da-GvuWbNzNV6GDGPA_mfK1WvXKVeoSXBSzkhVd4pLMGbqb-z_TfczJFH_WE7aeDZr4spTLn9II1SSGJ
-fZsgNMTtDPVKe_H-MNdP4R49GjVPUJwwHFkw0o4jhEDS2NtKztKYyiJaQRnpLc96FWcB_YRLNekAifHD
-rqV748Sauz32NWjKHxW8tjd8Jx50TBmMweDYiuA8lCCTaK7XLcQKbBvwO8M3vSkZrZzEauQELQeRpQ0J
-dQXDDJf-FEpe1bgOv9_2tnab4lz4N3g9BWrMVbQ8BVMzASu_ca0FCMkKIn8bB5Box0qEmKu3lvXCVR6K
-Bpv4lb1m3cJKxUbDJ92OQ2uNHU6Egwqrm4r0U332eXwUQ-D0JtuE_WcgVatf6zSS-rHonhAGA2IM-MwQ
-Vk7Lj4zpPOhmcxzlBQhNcbUe8vBGu5g-gkFstwSpnlbMA4cd92Xnn1kDusjQTBEEydICDUdjzn6femmt
-7z52FND96YUghIFw4lUan9HnC4MheBXi_G_nffN93jU59jj9rTn8DxhWS82sDwgCyBfJMayrQIco5Z2L
-4C7iEHaqrlM_C8WQwUnl3HuhuR2eGcP2wS-9_CRbYhCONp_bpr5t-gJwGLYleEPlH88TR4YlIxdK_b5b
-1VhlsqYrHXwJGshcEW6TUl6thzVhTavG53VpisKBNFw46pgD5E_cOO7jU15_d812go0OWLPt5MAYvnYe
-cKeWyyeVwuV5ZqZXBVkDn83h7pnGvuoPkeow-JLJbyuIZTMgoE44MpnV7XVcAl-kk8K1gzJ-DOC6xB6X
-dsLKWF7y4JLeGUg4CkM3kQuOBMnnGywd8BveYyi3ni4hXqW4ZW4Y3Fth7_lMk1B-vc1CGJBO0DKAQL8E
-BasUK8OCvYPByZ2PI7fwISKlagtv2EaFFu6fSBF4N2yp4GLDOTBHJolNobLyb95Aj3peuOM5QtMqCtT6
-_6UWbyEu3q0Hwogz6r41Z6350qkMd5vlJOn_7PQuwA_QGPt-l/L7ct6QiL',
-    downloadMp4: 'https://154.82.111.45.sslip.io/dl2/dwzlr4vr7tllaXVW2wDKxCypOM7
-golflBkX44IUmL_AUo-DAFcADFYjAexkt8_CjsAe7BOycAMLO1jt0BYDodqVjrr0gl-4siLYb5_XXFW9
-fgeRitcbe6RCBqLD6mDg4bH5yBGeFTdygoInva0lyUbQraWQaqUvQEbNDDdyMObenA3cxXU46n5PRkJj
-dywcLnGXvNoTvYo2-ssHy1JRXEGmivxCQbnx4pFEomv23xNtWatzoQbMdUPJM9mSKFtusU4qb00FMPR8
-mwyw9rUR4B_YckeXu730lsruWmOM4GgI925Ox5YN7JPHxABttXhkHvLbc4MWluC5RdW9fJYFvsNj9HDl
-8ATKIOZUelg-1x_Dyl_C4yTAHTiTZmLsS47tJhTq-geLsKUp9Jdx-UL-hD3Q-B9xaDXbfxpFmDKgBhIV
-qDuMObpf63YuwaoY3aUsZhL33a_g05qBsK2740BJvReet3OiG8QyaRGOalds7C3acmUETajpl0bawh07
-Eem03OB9XgnIhPrKso-RfCtYRTtGl_m3vk-PP6lbdBk9wSL5VbcS_u2jg3yxNWkglxRHoDidiDaVhguD
-G9EZWsxbzfE_UIfu2lb4vIf5bZqe4EqpvAtjEJsCT7uYQHw5RjmRid4l1T5vt_pGJOA8bQvx44IGWqhw
-tgMEgXge3sA1lqfpc0-2dlIYaJg0LDKFl74axwQp5Z51Ok9t-YDy4ipjVGZwsIfkhMvwdppmbO85_Fly
-VBEM_xdO8TgUtmE6uUXt6gwkAfwmS30ur1tFtmmdiqE6lCKZT_rRF539aTnLUVJEsJTviIm_5PRHJk_L
-rgcov941ytilkYAqHALEqD9EmMHqfxiJvJk1gunVHsSXmeITQ6XxosT59zHrG4KvlUiGXHXQPUVrxMyR
-OVNIZdS5nijpRfjAgbGVD88xyz7CO3gOqecvrXIYAGe4waPpqV4kdmZFvYJKbjE3YLj1KX2Py2qG9j-Z
-H8N9ZfHa3rORux7P263Isa4g-sdpygPEKtWi69mnZhFMUALlCRFki3RRnthtasP72z0aN-Ia4SdKLfYr
-6nE3TwkbED1wtX2v1wTxl8qnEHKY3SrVbtbI4ZR9pnWDgqdiov8YQxfhlqyUj2KNPe5Hg4o46c-TuCMV
-Age3qF1yrseMFsnGOnt4C6GrwCwmR1nkMOpTgT-f2nbk7jMYETCpyvJ3jhunQs1REZLUg6TmicKZpJ4l
-nmPC3oYUV95gyXxYDpRBmtj7jRa8gQwBslOBhmFKgRaC3OYpwP4cE-9tIy9ycjOnzzw4QPEU7SsjD6e4
-IPsXorXAqAzdVP77zoVFgnTwyZuS3UtIY8CjVacvssSn0PY_LzKi9hM2lLEZcOVrvZP4wWf_HRFZ-F-q
-SDNiLCe2CRwSlp5ZaHyzx/F8wuzIg6',
-    duration: '3:35',
-    thumbnail: 'https://i.ytimg.com/vi/jZxRBNJdM_4/hqdefault.jpg?sqp=-oaymwEiCKg
-BEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLB1hp68SiGbShwy233tzKImS8H
-FJQ',
+    title: 'ED SHEERAN - Perfect (Available in Spotify)',
+    id: '-UChv0ntn-U',
+    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/74e2964bb8e041ccb8e8b1a2438b7949_140.mp3?secure=2GKtBQlEK1_lLZU3LGL_Tg==,1672235211',
+    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/74e2964bb8e041ccb8e8b1a2438b7949_18.mp4?secure=8JydKyWmby0wni1S5zM21A==,1672235211',
+    duration: '4:25',
+    thumbnail: 'https://i.ytimg.com/vi/-UChv0ntn-U/hqdefault.jpg',
+    quality: 'AUDIO_QUALITY_MEDIUM'
+  },
+  {
+    title: 'Mirrors - Justin Timberlake (cover by Andrew Ripp)',
+    id: 'i1bhSwNU9Ek',
+    downloadMp3: 'https://154.82.111.45.sslip.io/dl2/wMOfoUHXFa8waSTUFhYX7iUpuhtL39XCqW7_-cjsEVahtwdVqq0LpHMg1ugSkSM1_EvOC7ZbNOQ_RIt24ffAn_cSBF7-4fTmca7Tz2Kdvveaj1axsDXWCKlhiGptFZl150Oc2fhltTmK71n9xJ_5Dt2YD5Qp0V9yEsKyB9r5SFXXT48cKWQNG_lOYNAKJlzlVJRToZA-UrsM0r6tueRwa_meI8Z2TrXgl_R5in9AJxXDbSZj2BbS0qoAbci-X3zKTi-CzTMmNs7ehn4mUCl92bZ1uWTkmbIP9YNTiswA-3HmpUVghcIvKtkXQI1RRxge4rz3niRVGMwKTtu06ylGqAqk1WCidWDfCICFk2D_hxjya3iQG7-2RIHn6k79R25rQmhh4ZhZORXYqNQZvwbnd6Iiacbh3BFwFy0ESiyx4vb1d5Kws3N7q8vGFFrjexVk6zdQEKO0Kl_zG9I63v9WOtkKZYa8YBf7KKolPv-I1DOoErSD_LelLApXm-bcTM77AjAIFZBeSc5efirhDYPViwqSnYy_k9qwQyW4qQK5VAiOTKJ5UQmKR4pZ7ucnG17vsQUDKWPfJo3dk7a17gGmJCQoiZSiSehC9HfRRWUC7-dlNR4815UeJBmrOU6JQ-UijpYaYdTAJXuxu3gVkoFtPrzZKd4dPRlFoLyCt1HQfhf1xYRtrtph-9lLNReLRiKhrtb86dAB1Gymj1KPEkwbZjDmyxjjxhKgPQbFiK1j-CIkdmBZyDLIGsE6gwi0rizi5tVOJHf4kq0PlkI26sIMS0q0G9yBIRGQAbP_5GVVYIp-zJcU9ylgQf378LK9QuLuPxEE13E6bR8xktFFKYtrwUySoiXfT8Z4U0yaJfEAWjsVpveVSTgRMScIXlkLDcOFsb6iBpcccmi2oQLHDzk-oz0GA0GbXm772QgvE9DCG1qRJ3fnr4_-iYVdOv7GIoLdmQ6mRrDUWWO9gf07BfZSEFKyBLmqoR5qIUc-tkzJPCrCGaRaUsw85v7sAr_dko7FX5TRBNTbmFtmucXU6NzAC8z2ICkdVkwYLtaPQn-U_q4r37uoa17OhoRzjf2dkNt-Qv341GDkQ_n_LSrz-l3RLIt_IA89JI1UNAPv8jnahke1JevLZ9-0zp-5VJeqV39Mw2rICKXX8lcRLOgO8cA0zkXEm1KZEPE_yUrGcRFingTURwlPskXFA_FFC3vf7mq-PDQzy_xI1mPVzvD-e8Zrea4K1wvI-zlRpU5ORDpzLpzfjsLPUww09GSmRwLzVJaGuxh4Do7zX3DkIG73fRTjSfFSQgHIy9pkeFbvK3yiOoPAWwjMeSDwmRTwP9OY_e5WaHV6KXUQgLO3bAI9Wt3KhA/ZGtNtWbi',
+    downloadMp4: 'https://154.82.111.45.sslip.io/dl2/0gHfzCadkDaFxqVIxXaEtOI5PngHiTDU_oHsZA8-JjfdusaHT3LUkssOczUFsYCrwefxcNtFz_b-9tDqkbNzPuR7RYsqWSIO3mDUxB3AWOoPeHEkP3RyaFejn17HFI_rHjd7XkVdSZSuIQpbhZvCoDuVoHC8-E4j5omrYF0QJ_8-DO4wTcSz0S_a8QDIn49gQI1LWN6n_Vz0tDvk0IoeGzUSeoiTKt2yVDXaaN9gDlchEpdMxEb5BpA2Hyw4NukVtFixC02JvlZDbFw2UpS3C0puxg8d6J9bzXGMR3_BcTBZtyCooURl9IoGfgXCb1j4xXlK-DxKF7cIL7arNW6boBlZALnNZb09sCEA2yQis-_2QSH4yX7CA4-AeuJrAfI7hEqmWuMX61CUsjs-esvOl2HqDRnAvhiSq9rF95viPrlo0RxwMkMS_FkrdOiGjmnlqTu3Vwb5QKXK-L7vcdNXx0HDgYlO1QxZKC0cIGwSxOHpvRxGXHqklLxwJRqHh2IjLebMI22J6q3g0hQLrmLKKZjoy0-M0O-dpU4crhxA6XV0HMle1ldUskYuZPoI9sKb71YnGxB2D0GCeIeQwhqf0aZnvo7Qech9iX6oVVGWeYwCku6udKniIlBpZZHs4CNbrMypcQ437Gy6fNrpii0RdpFb6nttK9liczvmBABYbNWIvi7maMGQ1KphcV8v_IZQ2xHpN95dRn3eb5eGtleGyCxPkIgDvZgz2tdkOtCuLcpM1WAD4ZpoBTaj_lMNeEQOmcxWWFKj2WxFwXxQLIzQm6MHdQ-0W8NOa4H2-dxUUx4j1gG9E1Bitb0RwFk-P2ZNmD4wytstxboMBOkgQl8vwx5b5DP_LuXhSVAP3QZb5SLv2fz1fG48RmkLorMRPuQ3L1ENplPVmf0ZdqUk-Ded31-ZbpuA2LsaLDyTYqGT__jtWhc7xhjbqoM8hMC7lYj2w7aFRyouAljJ2YVIluMkv6Lwygcq3OZ7itMSfjaRtLcFies4wHKZz_zai0E3GlIFrfrXn14l7ycTjl4b_xDqqos8P7zFOAlBFAQvGZ2Yv9yMA1ve6t9FlOul9hN2bgmx98aGZArpJd1eqZ9DheC_v9xsSRmOE9IqoSq6hmlATpz9HeDAk5JonJTGDE-R3EMD_e1WAeuBpyzDy8vrm2shHc30FS-8nKHDt3PhFf7G6rFRlBL9DCERXmsAkNwSZMAoHkV3cJLxQqig0RihvJ7xafTw_C-tE1JnzcNrnyUJkTvqPS7BbRQhxL-F_Jpqhlk-gDdG1LTCGrEmMg1o3E_NRyJfA6Yq_F5yfbPWrC4ZipcBIsJI2cQI6rl8fVIILZxBTdN0/leIQeqDv',
+    duration: '5:16',
+    thumbnail: 'https://i.ytimg.com/vi/i1bhSwNU9Ek/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLAhIfUrrwEO7QWqlkpUXBzFHlho1g',
+    quality: 'AUDIO_QUALITY_MEDIUM'
+  },
+  {
+    title: 'Zedd, Maren Morris, Grey - The Middle (Official Music Video)',
+    id: 'M3mJkSqZbX4',
+    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/5758f690ba1b49a4b475f8acb349a6b2_140.mp3?secure=OLlNDmfw0KI6fVuJVi4t1A==,1672235214',
+    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/5758f690ba1b49a4b475f8acb349a6b2_18.mp4?secure=bdXPGeXcuWbHAlpj4Pkpsw==,1672235214',
+    duration: '3:11',
+    thumbnail: 'https://i.ytimg.com/vi/M3mJkSqZbX4/hqdefault.jpg',
     quality: 'AUDIO_QUALITY_MEDIUM'
   }
 ]
@@ -147,11 +120,11 @@ __Usage__
 
 ```js
 let data = await downloadFromYtmp3([
-  {url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
-  {url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
-  {url: "https://www.youtube.com/watch?v=orJSJGHjBLI"},
-  {url: "https://www.youtube.com/watch?v=GYrl0wQjGH0"},
-  {url: "https://www.youtube.com/watch?v=Uaw014umzn8"},
+  {url: "https://www.youtube.com/watch?v=fvEZUbzqqyM"},
+  {url: "https://www.youtube.com/watch?v=km4YsvWTCfQ"},
+  {url: "https://www.youtube.com/watch?v=-UChv0ntn-U"},
+  {url: "https://www.youtube.com/watch?v=i1bhSwNU9Ek"},
+  {url: "https://www.youtube.com/watch?v=M3mJkSqZbX4"},
 ])
 console.log(data)
 ```
@@ -168,12 +141,12 @@ __Usage__
 ```js
 (async () => {
   let data = await downloadFromYt1s(`
-    https://www.youtube.com/watch?v=pfPD183rUu0
-    https://www.youtube.com/watch?v=Q921shchhi0
-    https://www.youtube.com/watch?v=4qF7UsVL_3s
-    https://www.youtube.com/watch?v=fGaMMHPkjPg
-    https://www.youtube.com/watch?v=jZxRBNJdM_4
-  `)
+    https://www.youtube.com/watch?v=fvEZUbzqqyM
+    https://www.youtube.com/watch?v=km4YsvWTCfQ
+    https://www.youtube.com/watch?v=-UChv0ntn-U
+    https://www.youtube.com/watch?v=i1bhSwNU9Ek
+    https://www.youtube.com/watch?v=M3mJkSqZbX4
+ `)
   //console.log(data)
   for(let i of data) {
     //destructuring data
