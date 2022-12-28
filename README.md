@@ -44,7 +44,6 @@ let data = await downloadFromYt1s(`
     https://www.youtube.com/watch?v=i1bhSwNU9Ek
     https://www.youtube.com/watch?v=M3mJkSqZbX4
   `)
-  console.log(data)
 console.log(data)
 ```
 
@@ -174,11 +173,11 @@ app.set("view engine", "pug")
 app.set("views", __dirname + "/")
 
 async function server(req, res) {
-	let data = req.body
-	let getData = (Object.keys(data).length) ? await downloadFromYt1s(data.url) : null
-	res.render("index", {
-      data: getData
-    })
+  let data = req.body
+  let getData = (Object.keys(data).length) ? await downloadFromYt1s(data.url) : null
+  res.render("index", {
+    data: getData
+  })
 }
 app.get('/', server)
 app.post('/download', server)
