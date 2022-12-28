@@ -193,15 +193,22 @@ __Usage__
 const express = require('express'),
 app = express(),
 bodyParser = require("body-parser"),
-{downloadFromYtmp3} = require('./scripts/index')
+{downloadFromYt1s} = require('./scripts/downloadMusic')
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.get('/downloadMp3', async (req, res) => {
-  let data = req.body
-  let getData = await downloadFromYtmp3(data)
-  res.send(data)
-  res.setHeader('Content-Type', 'application/json charset=utf-8')
-})
+app.set("view engine", "pug")
+app.set("views", __dirname + "/")
+
+async function server(req, res) {
+	let data = req.body
+	let getData = (Object.keys(data).length) ? await downloadFromYt1s(data.url) : null
+	res.render("index", {
+      data: getData
+    })
+}
+app.get('/', server)
+app.post('/download', server)
 app.listen(8000)
 ```
 
