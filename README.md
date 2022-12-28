@@ -51,7 +51,7 @@ console.log(data)
 
 __Example__
 
-```json
+```js
 let data = await downloadFromYt1s([
   'https://www.youtube.com/watch?v=JGwWNGJdvx8',
   'https://www.youtube.com/watch?v=om6EutvhnlY',
