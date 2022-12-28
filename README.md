@@ -1,8 +1,8 @@
 # Youtube-Downloader-Script
-Youtube-Downloader-Script is a script uses YTmp3, YTmp3 API's to download youtube videos in both mp3, mp4 and give you download the options to download in an object
+Youtube-Downloader-Script is a script uses YTmp3, YT1s API's to download youtube videos in both mp3, mp4 and give you download options to download in the media files in an object
 
 ## Overview 
-- as the name refers this script allow you to download videos from youtube you can integrate it into you website or app to allow users download youtube videos throgh your website 
+- as the name refers this script allow you to download videos from youtube you can integrate it into you website or app to allow users download youtube videos throgh  
 
 ## Requirements
 1. make sure that you are already installed `nodejs` if you are not installed you can download lastest version from [this link](https://nodejs.org/en/download/) 
