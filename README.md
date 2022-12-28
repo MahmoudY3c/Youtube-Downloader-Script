@@ -37,11 +37,13 @@ Youtube-Downloader-Script is a script uses YTmp3, YTmp3 API's to download youtub
   __Example__
 
 ```js
-let data = await downloadFromYt1s(`
-  https://www.youtube.com/watch?v=JGwWNGJdvx8
-  https://www.youtube.com/watch?v=om6EutvhnlY
-  https://www.youtube.com/watch?v=qqob4D3BoZc
-`)
+let data = await downloadFromYt1s([
+  'https://www.youtube.com/watch?v=pfPD183rUu0',
+  'https://www.youtube.com/watch?v=Q921shchhi0',
+  'https://www.youtube.com/watch?v=4qF7UsVL_3s',
+  'https://www.youtube.com/watch?v=fGaMMHPkjPg',
+  'https://www.youtube.com/watch?v=jZxRBNJdM_4'
+])
 console.log(data)
 ```
 
@@ -49,7 +51,7 @@ console.log(data)
 
 __Example__
 
-```js
+```json
 let data = await downloadFromYt1s([
   'https://www.youtube.com/watch?v=JGwWNGJdvx8',
   'https://www.youtube.com/watch?v=om6EutvhnlY',
@@ -63,70 +65,74 @@ console.log(data)
 ```js
 [
   {
-    title: 'Ed Sheeran - Shape of You (Official Music Video)',
-    id: 'JGwWNGJdvx8',
-    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/4fc86dc22d684e13af
-ddf397e072af7c_140.mp3?secure=a9ejg1xQjFxY_qhcjk8l0w==,1672225175',
-    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/4fc86dc22d684e13af
-ddf397e072af7c_18.mp4?secure=4A_XQ2R7vwPoXFcXw5IQuA==,1672225175',
-    duration: '4:24',
-    thumbnail: 'https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg',
+    title: 'اه دا اللي صار- ناي البرغوثي',
+    id: '4qF7UsVL_3s',
+    downloadMp3: 'https://dl181.y2mate.com/?file=M3R4SUNiN3JsOHJ6WWQ3aTdPRFA4NW1
+rRVJIODh0ZDgzZlJ0Z2pSNlJQTWI3Y2dMajZHQkJZeHJkdUl1bXNIbk5ZWVIxR21kVlluT2FGdk1rc0Z
+qR2lmRTA0OTQ0UjZFdHFwNEhPc2tFektnM3NmMDB4VXV6Q1drTlozcFRQME9PekpmK3dWQ2hHTzNsYlN
+NbUY2OWx5WG9oaHJHU0gxUDZtOU9HYTJWME1jTjhUR09UYWFoOThoQWp3ZmF4c01NZ3FqWWtGbXo0cEI
+3bklVd0JtVTZmb0FPbjV6ODAvWHp0VVlOaU1SWmlHdTlwdmV5RTV3d1dmZTRkQ2NqZTNBdjdhcTllazh
+QNlhJcjYxcVN5Zncyb0cwWkl1Wnk3VzNwM05Xdll5ZUlkOUR6VzVpSkw3WHM4SktyczZreTdoYVI0UER
+Sd1o1Q3h3PT0%3D',
+    size: '4 MB',
+    quality: '128'
+  },
+  {
+    title: 'اه يا حلو- ناي البرغوثي  Ah Ya Helu- Nai Barghouti',
+    id: 'Q921shchhi0',
+    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/12dd9e3dc38c401abb
+dac2100e44b147_140.mp3?secure=YvCkaaX9rrz9PXDW0ZdOvg==,1672106886',
+    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/12dd9e3dc38c401abb
+dac2100e44b147_18.mp4?secure=q9RabBVPMhEIYhj2jwIbKA==,1672106886',
+    duration: '6:49',
+    thumbnail: 'https://i.ytimg.com/vi/Q921shchhi0/hqdefault.jpg',
     quality: 'AUDIO_QUALITY_MEDIUM'
   },
   {
-    title: 'PARTY MIX 2022 ? Best Mashups & Remixes Of Popular Songs 2022  ? EDM
- Party Electro HousePopDance',
-    id: '',
-    downloadMp3: 'https://154.82.111.45.sslip.io/dl2/xIsw8gguNLeuMhdATKXF03I4-Oz
-q4EqLNaQoFDzWsi796IveE0RE5dqhTUBuRmqXaXMjGUNvHJ_gtmZ4XLV4xPM2NYzkuFg-6ThvKT1IXJr
-TT4EYrWhP31bNMh0V6voxxMmbBVSsocOXAeFeqVY9LMSBEabOzEoAJx4W0a8iLYPcJVqXVc8swMasNwi
-BhMwYMILKI69HfS8BZ3-h72BgN8-NpVz3HNicEPeLsZ887NxkANsTxKEGkCtxLfIbwS7YFsuEP2iiAU1
-J1efZr3opU4zvSrNG8i0cREqVMxMhIjS1c9GZj5WD4R1AhEccMywek0F6xYdS5G2J39Nq94PhAxGg3-V
-fDlsfe4UBueoegg_IWZITYmF6DzsQvj8aWK9gXI2EKeaKktlP-78Qs0KnMs1LsHbMXNDLHYH16bvJMlH
-KXgQBTdRTlNWE8H1G-XO0YCXXD7uxx9i53B2y3leZfG74MvbK3kf8-Tn-S27f7lsq3_zj_L0ze4XM7ck
-3Ufslr_8Qz7et43758zCPh_MCjQzrfRjYyqmHowhMOtOffoU4EVIiPhi4xOrXOFn_u-ys3TZJV4Y6Z6v
-zQKOO3dXladzBN1D_RUvQEqgIehcGqD_xZMeFHzCTaxY0kTelZ-blu5Cm0wdApQVqoja2arQurgOglK0
-6f-KNXRsuPIbogHdLfP4zT3zZpi21uTUW9E-0Oc-fNQBs7ypXy-rEbyGxcr9FkZEuvs7I87bveEs7Vi5
-_7MT3Bn742zrcL1TxS_OmaYxHR41B4AQBG-CME_nD-x8pJiHN_swUBMWfIUlGGCYbRfcK1vEf7EOvUSh
-OGJNGVPb8kk8jEPrPV-z2crl3D73VEqkbDA0dWj7eZbEyldol6C5OuEU4t2z6eSaE-SIMsWRh5u4QV0m
--dL7PTfSC2okZj3ar4YOcrtofo_R7hWC5Drbvj1RbG-sn3_hqtnO4H8AVe3I_CwHFSgu0cmMormqdShe
-mHz9JYlpW7XIxmek_mXYGUKsz8mP8gfpm-WkkATqfrB6tlsOn1Zta-n-INorHQvMh4csDYv5Q0vPJvL5
-liWoKKTUxJ5hDJqXE8D5Y_O_Gr4o8FYdIxVbEfc-SowqBz_e-BGrZ7RusZrC_nuw9gxz8kNKerM7rxfr
-bq05cpV09sg1hR9WOvvN4WzTTX_2I_cXkPkmJdsx5EheeyrSP5HJiQjCwowTVoM2tbhC7BCDXPSV3q9A
-TZ-rGLe0v-W4r857pEUw5r03cJfcTcYHcyozCD8JKox6jt1zWgNB1u73gVPP7JFFfkeapWc1O8nSqN2I
-QcZHYrOa-U8cuCJ0W-iIXlPSBFmqk5UYH8ELzcwOasE0C7sxFo4NvJM_C/lY-qv8zO',
-    downloadMp4: 'https://154.82.111.45.sslip.io/dl2/XZ97WHfkXtfh6n-o7dmMT97yj-p
-EBitrDqoj6i9aBPzTvOe-UN5xwVEH9c9K0W3UTRgtcSkp0WsNGXGG5ZSIMqvB0HmpzXQySZeH_WCoKoB
-8Bh0sTwm-V0Is_2_sRMra1rw8Pg81TulQ4yl1z791P6T6nFm3ixipHxTodTjQTz0CcmbO2BOjIaEWx6W
-vIrrpfFlurM1gtrP2nw8zQvmir7QcXKhwclAygDuXaT-T02RauMnfs7t8nlNc0m65VCJe7nfLPdfsWon
-SsHMoCg6QuzDsnQAVvUy-KvjxwCDm74gGK74_er4HEyFC0lrqocWy_WXffbG7cA8rzZeWr0zHoW8aap0
-n6v7JJZ9kgEgyulyH6qbxpgGORXdzhn9CbQyYe0P7kloOisxoRF31uJG_K4jTWAdnwzhESSvzMldK6EX
-ResQgHmh0OXblgzx3N86-smjS2YZoLW2BRUikIFpQEij3TtDLUPb71j8Du9oHoLuR0ol_0_6EEU-h5hD
-NJfGNgE166J2VbbUZ8s4ow2MRTtgkvwwR0_aCcbwaK-Pveungnmw2gQ84k1iflJRlGG6gcDgN-ileWQk
-Td6980fHv_jOJdsKlG30KfVb4SX9aSLEwPa9R2_CFXGn_HjCxA5GNQ8fqqOr_kFX4h90BEo71c8Sqe0g
-WPDOr37SCNnYYZd3kONHSyQrYYHe1h7wAO4wMzjnb5hD2FBZB4TCCEelSkOU3hYASL5u3EEhl79rMywe
-R4nKo7kX5DdfRTUxr14LBmyUd9Co_-5pr-csVfdu2-gkoLnmYyL8Y8oz4ygyWsO_270a61AryDNPwLeZ
-CRP-xnXh1DevadNmu9N6l67YHgJnSmBGiU9gj_4DOiX4fj7_0O731zmu8JJDb3HXiAP1Ngd_MiugDhhp
-J0yZ7l3CdfrKdHFO64L4QjQfNGC60QMMf_TXSboLrasheM8dKc3X0lCNePQqeS_rQoEy3kcmotZmjsZO
-3Cadle3FY-18p4ihNVpnZ_0Q7YE9hzbuMeazTk9r8WmuIef8KOkI_qAoWnGlzj3rKEJ_FC-jgzsBjWwU
-0gnUJQHZVRvB3KXeXJWpk0KxESqT5t5A2lyoOAtqLfQNcWkJBG8niE6GMpvhrPY3CFsONSjCbqoQysS6
-a-oHIzCWzPTbxJMzQlideOH574Wkgfc9RFuojiC9B01QwBHAr41hSOMNLulvhTuBRqJR1p0pqi7_Py6D
-bLf0YByOwyaJsRgwFnJxvLx7CGEp5_24a5gRAbl7eawUGrfYzxVE_gBUSsGFPGlndUpeoKBhNeypszCE
-QESDYujV_Eow4behglYMKqqlChNmau-0rIPebkh-gpzOhyNjXMziV5ZngQg2zGmMU4WH7zod_bg/XzfG
-DtOk',
-    duration: '18:57',
-    thumbnail: '',
-    quality: 'AUDIO_QUALITY_MEDIUM'
-  },
-  {
-    title: 'Anne-Marie - Ciao Adios [Official Video]',
-    id: 'qqob4D3BoZc',
-    downloadMp3: 'https://cdn2.ytsservice.com/cdn-resource/yt/f9bb135235504bb9a0
-ababff054a2d82_140.mp3?secure=vSXGh58v48Z4ZLcdQIFgNg==,1672225178',
-    downloadMp4: 'https://cdn2.ytsservice.com/cdn-resource/yt/f9bb135235504bb9a0
-ababff054a2d82_18.mp4?secure=6wRSdKrLyggALJADC9omYg==,1672225178',
-    duration: '3:30',
-    thumbnail: 'https://i.ytimg.com/vi/qqob4D3BoZc/hqdefault.jpg',
+    title: 'وَاللَه ما طَلَعَت شَمسٌ وَلا غَرُبَت - نوران أبو طالب',
+    id: 'jZxRBNJdM_4',
+    downloadMp3: 'https://154.82.111.45.sslip.io/dl2/Sq8oraKaNli0Js5GqqF9GMo1wBc
+f_F5NyrJ0X9JEJqsIDUYMLgDP9C8-ry745tz89adMIx-Pgv7hMZ1TRQeMIDDY4g7otnvQscR2UafHMmN
+DGajsTQwvWkZSRxK2zVgpSO_0BdFb0rAVp1O4I2ON2aerVpKWpTE5d_8FHlGEmnOhxa8nbngn5BmnCFj
+sZJBhM1uWvIQ-q_FaV_WdKubRbtJzGByXau0Gi9mz1oGyjUHqmIDAyeEPq-BSWFBQZAG7CwT2fyA5EL_
+NfvtmRXKE1inZ4YQdf9AQAcOBMKck8ys0n8IOl4csh4OKetv1GSqV9Ucc3fCdg1Eg975J7yuVaJ3U_Mb
+dCVpNgM4ZnJXO-yYBl3wvxFYqNVS8TfBLk-bm381yh68UyziV2lTx4o3PkmnDLvGX8Y8W5tLsd8xgpoo
+Da-GvuWbNzNV6GDGPA_mfK1WvXKVeoSXBSzkhVd4pLMGbqb-z_TfczJFH_WE7aeDZr4spTLn9II1SSGJ
+fZsgNMTtDPVKe_H-MNdP4R49GjVPUJwwHFkw0o4jhEDS2NtKztKYyiJaQRnpLc96FWcB_YRLNekAifHD
+rqV748Sauz32NWjKHxW8tjd8Jx50TBmMweDYiuA8lCCTaK7XLcQKbBvwO8M3vSkZrZzEauQELQeRpQ0J
+dQXDDJf-FEpe1bgOv9_2tnab4lz4N3g9BWrMVbQ8BVMzASu_ca0FCMkKIn8bB5Box0qEmKu3lvXCVR6K
+Bpv4lb1m3cJKxUbDJ92OQ2uNHU6Egwqrm4r0U332eXwUQ-D0JtuE_WcgVatf6zSS-rHonhAGA2IM-MwQ
+Vk7Lj4zpPOhmcxzlBQhNcbUe8vBGu5g-gkFstwSpnlbMA4cd92Xnn1kDusjQTBEEydICDUdjzn6femmt
+7z52FND96YUghIFw4lUan9HnC4MheBXi_G_nffN93jU59jj9rTn8DxhWS82sDwgCyBfJMayrQIco5Z2L
+4C7iEHaqrlM_C8WQwUnl3HuhuR2eGcP2wS-9_CRbYhCONp_bpr5t-gJwGLYleEPlH88TR4YlIxdK_b5b
+1VhlsqYrHXwJGshcEW6TUl6thzVhTavG53VpisKBNFw46pgD5E_cOO7jU15_d812go0OWLPt5MAYvnYe
+cKeWyyeVwuV5ZqZXBVkDn83h7pnGvuoPkeow-JLJbyuIZTMgoE44MpnV7XVcAl-kk8K1gzJ-DOC6xB6X
+dsLKWF7y4JLeGUg4CkM3kQuOBMnnGywd8BveYyi3ni4hXqW4ZW4Y3Fth7_lMk1B-vc1CGJBO0DKAQL8E
+BasUK8OCvYPByZ2PI7fwISKlagtv2EaFFu6fSBF4N2yp4GLDOTBHJolNobLyb95Aj3peuOM5QtMqCtT6
+_6UWbyEu3q0Hwogz6r41Z6350qkMd5vlJOn_7PQuwA_QGPt-l/L7ct6QiL',
+    downloadMp4: 'https://154.82.111.45.sslip.io/dl2/dwzlr4vr7tllaXVW2wDKxCypOM7
+golflBkX44IUmL_AUo-DAFcADFYjAexkt8_CjsAe7BOycAMLO1jt0BYDodqVjrr0gl-4siLYb5_XXFW9
+fgeRitcbe6RCBqLD6mDg4bH5yBGeFTdygoInva0lyUbQraWQaqUvQEbNDDdyMObenA3cxXU46n5PRkJj
+dywcLnGXvNoTvYo2-ssHy1JRXEGmivxCQbnx4pFEomv23xNtWatzoQbMdUPJM9mSKFtusU4qb00FMPR8
+mwyw9rUR4B_YckeXu730lsruWmOM4GgI925Ox5YN7JPHxABttXhkHvLbc4MWluC5RdW9fJYFvsNj9HDl
+8ATKIOZUelg-1x_Dyl_C4yTAHTiTZmLsS47tJhTq-geLsKUp9Jdx-UL-hD3Q-B9xaDXbfxpFmDKgBhIV
+qDuMObpf63YuwaoY3aUsZhL33a_g05qBsK2740BJvReet3OiG8QyaRGOalds7C3acmUETajpl0bawh07
+Eem03OB9XgnIhPrKso-RfCtYRTtGl_m3vk-PP6lbdBk9wSL5VbcS_u2jg3yxNWkglxRHoDidiDaVhguD
+G9EZWsxbzfE_UIfu2lb4vIf5bZqe4EqpvAtjEJsCT7uYQHw5RjmRid4l1T5vt_pGJOA8bQvx44IGWqhw
+tgMEgXge3sA1lqfpc0-2dlIYaJg0LDKFl74axwQp5Z51Ok9t-YDy4ipjVGZwsIfkhMvwdppmbO85_Fly
+VBEM_xdO8TgUtmE6uUXt6gwkAfwmS30ur1tFtmmdiqE6lCKZT_rRF539aTnLUVJEsJTviIm_5PRHJk_L
+rgcov941ytilkYAqHALEqD9EmMHqfxiJvJk1gunVHsSXmeITQ6XxosT59zHrG4KvlUiGXHXQPUVrxMyR
+OVNIZdS5nijpRfjAgbGVD88xyz7CO3gOqecvrXIYAGe4waPpqV4kdmZFvYJKbjE3YLj1KX2Py2qG9j-Z
+H8N9ZfHa3rORux7P263Isa4g-sdpygPEKtWi69mnZhFMUALlCRFki3RRnthtasP72z0aN-Ia4SdKLfYr
+6nE3TwkbED1wtX2v1wTxl8qnEHKY3SrVbtbI4ZR9pnWDgqdiov8YQxfhlqyUj2KNPe5Hg4o46c-TuCMV
+Age3qF1yrseMFsnGOnt4C6GrwCwmR1nkMOpTgT-f2nbk7jMYETCpyvJ3jhunQs1REZLUg6TmicKZpJ4l
+nmPC3oYUV95gyXxYDpRBmtj7jRa8gQwBslOBhmFKgRaC3OYpwP4cE-9tIy9ycjOnzzw4QPEU7SsjD6e4
+IPsXorXAqAzdVP77zoVFgnTwyZuS3UtIY8CjVacvssSn0PY_LzKi9hM2lLEZcOVrvZP4wWf_HRFZ-F-q
+SDNiLCe2CRwSlp5ZaHyzx/F8wuzIg6',
+    duration: '3:35',
+    thumbnail: 'https://i.ytimg.com/vi/jZxRBNJdM_4/hqdefault.jpg?sqp=-oaymwEiCKg
+BEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLB1hp68SiGbShwy233tzKImS8H
+FJQ',
     quality: 'AUDIO_QUALITY_MEDIUM'
   }
 ]
@@ -141,9 +147,11 @@ __Usage__
 
 ```js
 let data = await downloadFromYtmp3([
-  {url: "https://www.youtube.com/watch?v=JGwWNGJdvx8"},
-  {url: "https://www.youtube.com/watch?v=om6EutvhnlY"},
-  {url: "https://www.youtube.com/watch?v=qqob4D3BoZc"},
+  {url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
+  {url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
+  {url: "https://www.youtube.com/watch?v=orJSJGHjBLI"},
+  {url: "https://www.youtube.com/watch?v=GYrl0wQjGH0"},
+  {url: "https://www.youtube.com/watch?v=Uaw014umzn8"},
 ])
 console.log(data)
 ```
@@ -160,9 +168,11 @@ __Usage__
 ```js
 (async () => {
   let data = await downloadFromYt1s(`
-    https://www.youtube.com/watch?v=JGwWNGJdvx8
-    https://www.youtube.com/watch?v=om6EutvhnlY
-    https://www.youtube.com/watch?v=qqob4D3BoZc
+    https://www.youtube.com/watch?v=pfPD183rUu0
+    https://www.youtube.com/watch?v=Q921shchhi0
+    https://www.youtube.com/watch?v=4qF7UsVL_3s
+    https://www.youtube.com/watch?v=fGaMMHPkjPg
+    https://www.youtube.com/watch?v=jZxRBNJdM_4
   `)
   //console.log(data)
   for(let i of data) {
