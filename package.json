@@ -1,0 +1,25 @@
+{
+  "name": "youtube-downloader-script",
+  "version": "1.0.0",
+  "description": "Youtube-Downloader-Script is a script uses YTmp3, YTmp3 API's to download youtube videos in both mp3, mp4 and give you download the options to download in an object",
+  "main": "downloadMusic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahmoudY3c/Youtube-Downloader-Script.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "<=0.21",
+    "express": "*",
+    "body-parser": "*",
+    "pug": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/MahmoudY3c/Youtube-Downloader-Script/issues"
+  },
+  "homepage": "https://github.com/MahmoudY3c/Youtube-Downloader-Script#readme"
+}

@@ -1,0 +1,158 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1.0')
+    title
+    style(type='text/css').
+      body, html {
+      padding: 0;
+      margin: 0;
+      }
+      nav {
+      background: #000;
+      padding: 30px;
+      color: #fff;
+      }
+      .title {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: verdana;
+      }
+      .title-colored {
+      color: #03fab3;
+      }
+      .header-body {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      }
+      .form, form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      width: 100%;
+      }
+      .field {
+      min-width: 50%;
+      }
+      .field, .btn {
+      padding: 15px;
+      }
+      .btn {
+      border: 0;
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      font-family: verdana;
+      cursor: pointer;
+      }
+      .btn:hover {
+      background: #0080ff;
+      }
+      .output {
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+      }
+      .down-links {
+      width: 100%;
+      }
+      .down {
+      padding: 10px 20px;
+      text-align: center;
+      color: #fff;
+      background: #000;
+      margin: 5px;
+      font-weight: bold;
+      font-family: verdana;
+      cursor: pointer;
+      }
+      .down:hover {
+      background: #0080ff;
+      }
+      .err {
+      color: red;
+      font-weight: bold;
+      font-family: verdana;
+      cursor: pointer;
+      text-align: center;
+      }
+      .results {
+      width: 90%;
+      margin: auto;
+      }
+      .resItems {
+      margin: 10px;
+      }
+      .vtitle, .downContainer, .type {
+      font-family: verdana;
+      font-size: 20px;
+      font-weight: bold;
+      }
+      .type {
+      margin: 5px;
+      }
+      .downContainer {
+      margin: 3px;
+      }
+      select {
+      padding: 10px 20px;
+      background: #111;
+      color: rgb(200,200,200);
+      }
+      .down-btn {
+      border:0;
+      padding: 10px 20px;
+      color: #fff;
+      background: deepskyblue;
+      text-align: center;
+      margin: 2px;
+      display: inline-table;
+      text-decoration: none
+      }
+      .down-btn:hover {
+      background: red;
+      }
+      .res-form {
+      overflow: initial;
+      }
+  header
+    nav
+      .title
+        | YouTube 
+        span.title-colored Downloader
+    .header-body
+      .form
+        // index
+        form(action='/download' method='post')
+          input.field(type='text' name='url' placeholder='Paste YouTube link here')
+          input.btn(type='submit' name='sub' value='Search')
+      .output
+        .down-links
+          if(data.constructor === String)
+            div.results !{data}
+          else if(data.constructor === Object)
+          div.results
+            if data
+              each i in data 
+                div.resItems
+                  div(class="res", data-id=`${i.id}`) 
+                    div.vtitle !{i.title}
+                    if(i.size)
+                      div(class="video-details") Size: !{i.size}
+                    else if(i.duration)
+                      div(class="video-details") Duration: !{i.duration}
+                    if(i.downloadMp3)
+                      a(class="down-btn" href=`${i.downloadMp3}`) Download MP3
+                    if(i.downloadMp4)
+                      a(class="down-btn" href=`${i.downloadMp4}`) Download MP4
+                    
+      script.
+          console.log(`!{JSON.stringify(data)}`)
+          
