@@ -10,16 +10,15 @@ Youtube-Downloader-Script is a script uses YTmp3, YTmp3 API's to download youtub
 1. make sure that you are already installed `nodejs` if you are not installed you can download lastest version from [this link](https://nodejs.org/en/download/) 
 2. make sure that you are installed `git` and clone the repo by `git clone ...` 
 3. open cmd and open this script foler `cd script-folder-name` 
-4. run `npm install` the package.json file will install only one package callled `axios` you can find details about it [through this link](https://github.com/axios/axios)
+4. run `npm install` to install requirements
 
-
-##Usage 
+## Usage 
 - before we start you have to know that all functions used in this script is returning a promise and uses `Async/Await` to handle requests one by one - you will find a simple usage example for every functio inside the script
 - in this section we will going into some details about how it works
 
 * script structure
 ```bash
-#Functions 
+# Functions 
 ├── downloadFromYtmp3 #getting videos from ytmp3 api
 │	└── getHighestQuality #a function uses to get you the highest quality of the mp3 array of objects
 ├── downloadFromYt1s #getting videos from yt1s api
@@ -38,13 +37,13 @@ Youtube-Downloader-Script is a script uses YTmp3, YTmp3 API's to download youtub
 
   __Example__
 
-```
+```js
 let data = await downloadFromYt1s(`
-	https://www.youtube.com/watch?v=pfPD183rUu0
-	https://www.youtube.com/watch?v=Q921shchhi0
-	https://www.youtube.com/watch?v=4qF7UsVL_3s
-	https://www.youtube.com/watch?v=fGaMMHPkjPg
-	https://www.youtube.com/watch?v=jZxRBNJdM_4
+  https://www.youtube.com/watch?v=pfPD183rUu0
+  https://www.youtube.com/watch?v=Q921shchhi0
+  https://www.youtube.com/watch?v=4qF7UsVL_3s
+  https://www.youtube.com/watch?v=fGaMMHPkjPg
+  https://www.youtube.com/watch?v=jZxRBNJdM_4
 `)
 console.log(data)
 ```
@@ -53,20 +52,20 @@ console.log(data)
 
 __Example__
 
-```
+```js
 let data = await downloadFromYt1s([
-	'https://www.youtube.com/watch?v=pfPD183rUu0',
-	'https://www.youtube.com/watch?v=Q921shchhi0',
-	'https://www.youtube.com/watch?v=4qF7UsVL_3s',
-	'https://www.youtube.com/watch?v=fGaMMHPkjPg',
-	'https://www.youtube.com/watch?v=jZxRBNJdM_4'
+  'https://www.youtube.com/watch?v=pfPD183rUu0',
+  'https://www.youtube.com/watch?v=Q921shchhi0',
+  'https://www.youtube.com/watch?v=4qF7UsVL_3s',
+  'https://www.youtube.com/watch?v=fGaMMHPkjPg',
+  'https://www.youtube.com/watch?v=jZxRBNJdM_4'
 ])
 console.log(data)
 ```
 
 - this function return array of objects something like the following which can be used for downloading the files in you PC or allow users to directly download it from your website
 
-```
+```js
 [
   {
     title: 'اه دا اللي صار- ناي البرغوثي',
@@ -149,13 +148,13 @@ FJQ',
 
 __Usage__
 
-```
+```js
 let data = await downloadFromYtmp3([
-	{url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
-	{url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
-	{url: "https://www.youtube.com/watch?v=orJSJGHjBLI"},
-	{url: "https://www.youtube.com/watch?v=GYrl0wQjGH0"},
-	{url: "https://www.youtube.com/watch?v=Uaw014umzn8"},
+  {url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
+  {url: "https://www.youtube.com/watch?v=UbNtHMy4ewA"},
+  {url: "https://www.youtube.com/watch?v=orJSJGHjBLI"},
+  {url: "https://www.youtube.com/watch?v=GYrl0wQjGH0"},
+  {url: "https://www.youtube.com/watch?v=Uaw014umzn8"},
 ])
 console.log(data)
 ```
@@ -169,44 +168,46 @@ console.log(data)
   3. fourth is extention or the media type and also you an get it by using `downloadFromYtmp3` or `downloadFromYt1s` methods
 
 __Usage__
-
+```js
 (async () => {
-	let data = await downloadFromYt1s(`
-		https://www.youtube.com/watch?v=pfPD183rUu0
-		https://www.youtube.com/watch?v=Q921shchhi0
-		https://www.youtube.com/watch?v=4qF7UsVL_3s
-		https://www.youtube.com/watch?v=fGaMMHPkjPg
-		https://www.youtube.com/watch?v=jZxRBNJdM_4
-	`)
-	//console.log(data)
-	for(let i of data) {
-		//destructuring data
-		let {id, title, downloadMp3, downloadMp4, quality} = i
-		let saveTo = await saveToMyPC(downloadMp3, title, './songs/', 'mp3')
-		console.log(saveTo)
-	}
+  let data = await downloadFromYt1s(`
+    https://www.youtube.com/watch?v=pfPD183rUu0
+    https://www.youtube.com/watch?v=Q921shchhi0
+    https://www.youtube.com/watch?v=4qF7UsVL_3s
+    https://www.youtube.com/watch?v=fGaMMHPkjPg
+    https://www.youtube.com/watch?v=jZxRBNJdM_4
+  `)
+  //console.log(data)
+  for(let i of data) {
+    //destructuring data
+    let {id, title, downloadMp3, downloadMp4, quality} = i
+    let saveTo = await saveToMyPC(downloadMp3, title, './songs/', 'mp3')
+    console.log(saveTo)
+  }
 })()
+```
 
 ##Use it in your server
 
 - about this question i created a folder called `server` that contains a simple example of how to use it in your page - __Tip:__ errors isn't handled it's just for test + also serperation order changed to be comma instead of new line to separate urls inside the text field
 - the folder contains a simple html page to explain how to implempent it in your server and there's the code snippt
 
-```
-	const express = require('express'),
-	app = express(),
-	bodyParser = require("body-parser"),
-	{downloadFromYtmp3} = require('./scripts/index')
-	app.use(bodyParser.urlencoded({ extended: false }))
-	app.use(bodyParser.json())
-	app.get('/downloadMp3', async (req, res) => {
-		let data = req.body
-		let getData = await downloadFromYtmp3(data)
-		res.send(data)
-		res.setHeader('Content-Type', 'application/json charset=utf-8')
-	})
-	app.listen(8000)
+```js
+const express = require('express'),
+app = express(),
+bodyParser = require("body-parser"),
+{downloadFromYtmp3} = require('./scripts/index')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.get('/downloadMp3', async (req, res) => {
+  let data = req.body
+  let getData = await downloadFromYtmp3(data)
+  res.send(data)
+  res.setHeader('Content-Type', 'application/json charset=utf-8')
+})
+app.listen(8000)
 ```
 
-- i hope it's useful for the thing who made for 
+# Issues 
+ - if there's any suggestion or errors you can send issues or contribute 
 - best regards
