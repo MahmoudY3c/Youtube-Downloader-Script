@@ -9,7 +9,7 @@ Youtube-Downloader-Script is a script uses YTmp3, YT1s API's to download youtube
 2. make sure that you are installed `git` and clone the repo by `git clone https://github.com/MahmoudY3c/Youtube-Downloader-Script.git` 
 3. open cmd and navigate to script folder `cd /path/to/script-folder` 
 4. run `npm install` to install requirements
-4. run `node downloadMusic` to run the script
+5. run `node downloadMusic` to run the script
 
 ## Usage 
 - before we start you have to know that all functions used in this script is returning a promise and uses `Async/Await` to handle requests one by one - you will find a simple usage example for every function inside the script
